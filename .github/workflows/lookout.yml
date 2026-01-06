@@ -1,3 +1,25 @@
-git add .github/workflows/lookout.yml
-git commit -m "Setup automated email radar"
-git push origin main
+name: Nightly Recon Lookout
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Hunting Script
+        run: bash hunt.sh
+
+      - name: Save & Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update Recon Data: $(date)" || echo "No changes found"
+          git push
