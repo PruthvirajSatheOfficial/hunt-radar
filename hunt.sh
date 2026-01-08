@@ -18,5 +18,5 @@ for domain in "${TARGETS[@]}"; do
     echo "[*] TARGET ACQUIRED: $domain"
     mkdir -p "$domain"
     subfinder -d $domain -silent | anew "$domain/subs.txt"
-    cat "$domain/subs.txt" | httpx -silent -sc -td -title -o "$domain/live.txt"
+    cat "$domain/subs.txt" | httpx -silent -sc -td -title -follow-redirects -o "$domain/live.txt"
 done
