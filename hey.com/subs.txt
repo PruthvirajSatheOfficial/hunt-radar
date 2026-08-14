@@ -299,3 +299,4 @@ mail.app.hey.com
 work-mx.hey.com
 private.hey.com
 prometheus.hey.com
+usercontent.hey.com
