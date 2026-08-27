@@ -300,3 +300,12 @@ work-mx.hey.com
 private.hey.com
 prometheus.hey.com
 usercontent.hey.com
+mail.usercontent.hey.com
+www.public.hey.com
+www.storage.hey.com
+www.usercontent.hey.com
+mail.storage.hey.com
+mail.world.hey.com
+mail.public.hey.com
+www.app.hey.com
+www.world.hey.com
