@@ -18928,3 +18928,4 @@ sql.dstream.binance.com
 smtp.app.binance.com
 ci.fstream.binance.com
 psmtp.smail.binance.com
+colo.binance.com
